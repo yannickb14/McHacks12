@@ -1,0 +1,387 @@
+/* Background */
+    .container {
+        position: relative;
+        justify-content: center;
+        margin: 0 auto;
+        
+        width: 30vw; /* 95% for extension */
+        height: 40vw;
+        margin-top: 5rem; /* REMOVE */
+
+        border-radius: 15px;
+        box-shadow: 2px 2px 30px rgba(255, 255, 255, 0.2); 
+        
+
+        border: 2.5px solid var(--fifaRareGold);
+    }
+
+
+    .flip-card-3D-wrapper{
+      height: 400px !important; 
+      width: 350px !important; 
+    }
+
+    .topRow{
+        margin: 10px auto;
+    }
+
+
+/* Blob Background */
+    .blob-outer-container {
+        position: absolute;
+        top: -20%;
+        left: -15%;
+        width: 200%;
+        height: 200%;
+        z-index: -1; /* Stay behind */
+        filter: blur(100px);
+    }
+
+    .blob-inner-container {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        overflow: hidden;
+        transform: scale(0.7);
+    }
+
+    .blob {
+        position: absolute;
+        width: 40%;
+        height: 40%;       
+        animation: spinBlob 8s linear infinite;
+        background-color: white;
+    }
+    
+/* Content Styles */
+    /* Product Name */
+        .cardTitle {
+            margin: 0 auto;
+            margin-top: 20px;
+            text-align: center;
+
+            font-size: 40px;  /* 8vw for extension */
+            
+            z-index: 1; /* Above Blob */
+
+        }
+
+        /* Horizontal Line */
+        hr {
+            border: none;
+            border-top: 1.5px solid; /* Customize thickness and color */
+            margin: 10px 0; /* Adjust spacing */
+        }
+
+    /* Authenticity Grade */
+        .templateGradeWrapper{
+            font-size: 90px;
+        }
+
+        .templateGrade {
+            margin-top: 20%;
+            margin-bottom: 20%;
+
+            text-align: center;
+            font-family: "Courgette", cursive;
+            font-weight: 300;
+            color: transparent;
+            
+            z-index: 1; /* Above blob */
+
+        }
+        
+
+
+        /* Percentage Grade */
+          /* Top Grade */
+            #percentageGrade,
+            #percentageGrade1{
+                position: absolute;
+                margin: -5px 0 0 15px;
+                font-size: 30px;
+                text-align: center;
+                font-family: "Manrope", cursive;
+                -webkit-text-stroke: 0.5px black; /* Black outline */
+                text-stroke: 0.2px black;
+            }
+          /* Bottom Grade */
+            .bottomRow #percentageGrade1{
+                bottom: 15px;
+                right: 15px;
+                transform: rotate(180deg);
+            }
+
+         /* Star Rating */ 
+        
+
+
+
+
+        .star-container {
+            display: flex;
+            gap: 5px; /* Space between stars */
+            margin-left: 20px;
+            margin-top: 15px;
+          }
+          .star {
+            width: 30px;
+            height: 30px;
+            background-color: var(--fifaRareGold);
+            clip-path: polygon(
+              50% 0%,
+              61% 35%,
+              98% 35%,
+              68% 57%,
+              79% 91%,
+              50% 70%,
+              21% 91%,
+              32% 57%,
+              2% 35%,
+              39% 35%
+            );
+          }
+          .star.filled {
+            background-color: var(--fifaRareGold);
+          }
+
+
+
+
+
+    
+        
+        .threeDtext {
+            position: absolute;
+            top: 50%; 
+            right: 50%;
+            transform: translate(50%,-50%);
+            text-transform: uppercase;
+            font-family: "Courgette", cursive;
+            font-size: 12em;
+            font-weight: 700;
+            color: var(--fifaRareGold);
+            text-shadow: 1px 1px 1px var(--fifaGold),
+                1px 2px 1px var(--fifaGold),
+                1px 3px 1px var(--fifaGold),
+                1px 4px 1px var(--fifaGold),
+                1px 5px 1px var(--fifaGold),
+                1px 6px 1px var(--fifaGold),
+                1px 7px 1px var(--fifaGold),
+                1px 8px 1px var(--fifaGold),
+                1px 9px 1px var(--fifaGold),
+                1px 10px 1px var(--fifaGold),
+            1px 18px 6px rgba(16,16,16,0.4),
+            1px 22px 10px rgba(16,16,16,0.2),
+            1px 25px 35px rgba(16,16,16,0.2),
+            1px 30px 60px rgba(16,16,16,0.4);
+
+            z-index: 100;
+        }
+
+
+
+            /* PopUp */
+                /* Letter Grade */
+                .popUpLetter {
+                    animation: popUpAnimation 2s ease forwards;
+                }
+                
+                @keyframes popUpAnimation {
+                    0%, 100% {
+                        transform: translate(50%,-50%) scale(1);
+                    }
+                    50% {
+                        transform: translate(50%, -70%) scale(2.5);
+                    }
+                }
+
+
+                .change-color-btn {
+                    margin-top: 20px;
+                    padding: 10px 20px;
+                    font-size: 16px;
+                    background-color: var(--fifaSilver);
+                    border: 1px solid #000;
+                    border-radius: 5px;
+                    cursor: pointer;
+                }
+        
+                .change-color-btn:hover {
+                    background-color: #ddd;
+                }
+
+                
+
+
+        /* Flip Card */ @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,600');
+html * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  *, *:after, *:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  .flip-card-3D-wrapper {
+    width: 30vw; /* 95% for extension */
+    height: 40vw;
+
+    position: relative;
+    -o-perspective: 900px;
+    -webkit-perspective: 900px;
+    -ms-perspective: 900px;
+    perspective: 900px;
+    margin: 0 auto;
+  }
+
+
+  #flip-card {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    -o-transition: all 1s ease-in-out;
+    -webkit-transition: all 1s ease-in-out;
+    -ms-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+    -o-transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+  }
+  .do-flip {
+    -o-transform: rotateY(-180deg);
+    -webkit-transform: rotateY(-180deg);
+    -ms-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
+  }
+
+  
+  #flip-card-btn-turn-to-back, #flip-card-btn-turn-to-front {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    cursor: pointer;
+    visibility: hidden;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: .7em;
+    padding: 0;
+    border: none;
+  }
+  #flip-card .flip-card-front, #flip-card .flip-card-back{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    -o-backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    backface-visibility: hidden;
+    z-index: 2;
+    -webkit-box-shadow: 5px 6px 32px 2px rgba(133,133,133,0.71);
+    -moz-box-shadow: 5px 6px 32px 2px rgba(133,133,133,0.71);
+    box-shadow: 5px 6px 32px 2px rgba(133,133,133,0.71);
+  }
+  #flip-card .flip-card-front {
+      width: 0px;
+      height: 0px;
+      background: transparent;
+      border-radius: 15px;
+
+  }
+  #flip-card .flip-card-back {
+    height: 0px;
+      background: transparent;
+      border-radius: 15px;
+
+      -o-transform: rotateY(180deg);
+      -webkit-transform: rotateY(180deg);
+      -ms-transform: rotateY(180deg);
+      transform: rotateY(180deg);
+  }
+  #flip-card .flip-card-front p, #flip-card .flip-card-back p {
+    color: grey;
+    display: block;
+    position: absolute;
+    top: 40%;
+    width: 100%;
+  }
+
+
+
+  
+
+  /* BACK CARD */ 
+  .piechart {
+    position: relative;
+    margin-top: 5%;
+    margin-left: 25%;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%; 
+    background-color: var(--fifaRareGold); 
+    box-shadow: 10px 10px 100px black;
+    overflow: hidden; 
+  }
+  
+  
+  .slice-1 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%; 
+    background-color: var(--fifaBronze); 
+    transform: rotate(342deg); 
+    clip-path: polygon(50% 50%, 100% 0%, 100% 100%);
+  }
+  
+  
+  .slice-2 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    clip-path: polygon(50% 50%, 100% 0%, 100% 100%);
+    transform: rotate(0deg); 
+  }
+  
+  .comments {
+        margin: 0 auto;
+        font-size: small;
+        text-align: left;
+        font-family: "Manrope";
+        font-weight: 500;
+        color: var(--fifaRareGold);
+        font-size: 18px;
+        z-index: 1; /* Above blob */
+        width: 80%;
+        line-height: 1.5;
+  
+    }
+
+    .fa-comment,
+    .fa-arrow-left {
+      font-size: 30px;
+      margin-top: 15px; 
+      margin-right: 10px; 
+      transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out; 
+      opacity: 0.8; 
+    }
+    
+    .fa-comment:hover,
+    .fa-arrow-left:hover {
+      transform: scale(1.2); 
+      opacity: 1;
+    }
+
+
+    .backButtonWrapper{
+      left: 15px;
+    }

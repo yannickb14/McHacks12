@@ -1,0 +1,35 @@
+{
+    "manifest_version": 3,
+    "name": "RealReviews",
+    "version": "1.0",
+    "description": "Grades products based on the trustworthiness of the reviews.",
+    "action": {
+    "default_popup": "index.html"
+    },
+    "background": {
+      "service_worker": "background.bundle.js",
+      "type": "module"
+    },
+    "content_scripts": [
+    {
+      "js": ["./content.bundle.js"],
+      "matches": [
+        "https://www.amazon.ca/*",
+        "https://www.amazon.com/*"
+      ],
+      "type": "module"
+    }
+    ],
+    "web_accessible_resources": [
+        {
+            "resources": ["models/local-distilbert/*"],
+            "matches": ["<all_urls>"]
+        }
+    ],
+    "permissions": [
+        "activeTab",
+        "scripting"
+    ]
+}
+  
+  

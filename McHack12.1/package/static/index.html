@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-eval';">
+    <title>Real Reviews</title>
+
+
+    <!-- Manrope (FONT)-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+
+    <!-- Courgette (FONT) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Manrope:wght@200..800&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+
+
+    <div class="flip-card-3D-wrapper">
+        <div id="flip-card">
+            <div class="flip-card-front">
+                
+
+    <!-- Front Card  -->
+    <div class="container card" id="container" style="width: 300px !important; height: 450px !important;">
+                <!-- Blob Background -->
+                <div class="blob-outer-container">
+                    <div class="blob-inner-container">
+                        <div class="blob"></div>
+                    </div>
+                </div>
+            
+                <div class="widgetContent">
+                        <!-- Top Row -->
+                            <div class="topRow">
+                                <!-- Percentage Grade -->
+                                 <span id="percentageGrade"></span>
+                                <!-- Product Name -->
+                                <h1 class="cardTitle" id="cardTitle">Rating</h1>
+
+
+                                
+                                <hr id="hr">
+                            </div>
+                
+                        <!-- TEMPLATE (DOES NOTHING) Letter Grade -->
+                        <div class="templateGradeWrapper">
+                            <h2 class="templateGrade">A</h2>
+                        </div>
+                        
+                        <!-- REAL GRADE -->
+                        <span class="letterGrade popUpLetter threeDtext" id="letterGrade"></span>
+
+                        <hr id="hr1">
+
+                        <!-- Bottom Row -->
+                        <div class="bottomRow">
+
+                            <h3 class="star-container" id="starRating">
+                                <!-- Add stars dynamically -->
+                            </h3>
+
+                            <!-- Percentage Grade -->
+                            <span id="percentageGrade1"></span>
+                        </div>            
+                        
+                    </div>
+                        <button id="flip-card-btn-turn-to-back">
+                            <div class="commentIcon">
+                                <i class="fa-solid fa-comment" id="commentIcon"></i>
+                            </div>
+                        </button>
+                    </div>
+
+
+
+                </div>
+
+            
+        
+                
+                
+
+                <div class="flip-card-back">
+
+
+
+                    <div class="container card" id="container" style="width: 300px !important; height: 450px !important;"> 
+                        
+                        <div class="card-back" style="background-color: black;">
+                
+                            <!-- Blob Background -->
+                            <div class="blob-outer-container">
+                                <div class="blob-inner-container">
+                                    <div class="blob"></div>
+                                </div>
+                            </div>
+                        
+
+                                </div>
+                                    <button class="backButtonWrapper" id="flip-card-btn-turn-to-front">
+
+                                        <div class="commentIcon">
+                                            <i class="fa-solid fa-arrow-left" id="commentIcon"></i>
+                                        </div>
+                                    </button>
+                                </div>
+
+
+                                </div>  
+                            </div>
+                    
+                        </div>
+            </div>
+        </div>    
+        </div>
+        
+
+
+
+    <!-- Change Color Button -->
+    <!-- <button class="change-color-btn" onclick="changeColors()">Change Colors</button> -->
+    
+</body>
+
+   <!-- Vanilla Tilts Cards -->
+   <script src="tilt.bundle.js"></script>
+   
+   <script src="tiltinit.bundle.js"></script>
+
+    <!-- JavaScript for Color Change -->
+    <script src="buttonPreview.bundle.js"></script>
+
+
+<!-- Link CSS -->
+<link rel="stylesheet" href="style/widget.css">
+<link rel="stylesheet" href="style/global.css">
+
+<script src="flipCard.bundle.js"></script>
+
+<!-- Link JS -->
+<script type="module" src="content.bundle.js" defer></script>
+<script type="module" src="background.bundle.js"></script>
+<script src="dynamic.bundle.js"></script>
+
+
+
+
+</html>
