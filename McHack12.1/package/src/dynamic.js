@@ -52,6 +52,7 @@ document.addEventListener('DOMContentLoaded', function () {
             const line = document.getElementById("hr");
             const line1 = document.getElementById("hr1");
 
+            const blob = document.getElementById("blob");
             const percentageGrade = document.getElementById("percentageGrade");
             const percentageGrade1 = document.getElementById("percentageGrade1");
             const commentIcon = document.getElementById("commentIcon");
@@ -68,7 +69,9 @@ document.addEventListener('DOMContentLoaded', function () {
                  // Color Bronze + Red + black background
                  container.style.backgroundColor = "black";
                  container.style.borderColor = "#9b7662";
-                 
+
+                 // blob
+                 blob.style.backgroundColor = "rgba(255, 64, 63, 255)";
 
                  cardTitle.style.color = '#9b7662';
                  line.style.color = '#9b7662';
@@ -101,6 +104,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
                  container.style.backgroundColor = "#2f2f60";
                  container.style.borderColor = "#cddbdf";
+
+                 // blob
+                 blob.style.backgroundColor = "white";
 
                  cardTitle.style.color = '#cddbdf';
                  line.style.color = '#cddbdf';
@@ -138,6 +144,8 @@ document.addEventListener('DOMContentLoaded', function () {
                   container.style.backgroundColor = "#2f2f60";
                   container.style.borderColor = "#f2e48e";
                   
+                  // blob
+                  blob.style.backgroundColor = "rgba(171, 240, 209, 255)";
  
                   cardTitle.style.color = '#f2e48e';
                   line.style.color = '#f2e48e';
@@ -166,11 +174,13 @@ document.addEventListener('DOMContentLoaded', function () {
             }
             else{
                 document.getElementById("letterGrade").innerHTML = `A`;
-                // Color Rare Gold + Green
 
+                // Color Rare Gold + Green
                 container.style.backgroundColor = "#2f2f60";
                 container.style.borderColor = "#f2e48e";
                 
+                // blob
+                blob.style.backgroundColor = "rgba(171, 240, 209, 255)";
 
                 cardTitle.style.color = '#f2e48e';
                 line.style.color = '#f2e48e';
@@ -197,8 +207,5 @@ document.addEventListener('DOMContentLoaded', function () {
             `;
              
             }
-            
-
-
         };
 });

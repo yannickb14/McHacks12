@@ -1,7 +1,7 @@
 import asyncio
 import websockets
 import transformers
-import torch
+#import torch
 import json
 import os
 from transformers import AutoModelForSequenceClassification, AutoTokenizer
@@ -20,7 +20,7 @@ class Review():
 SERVER_URL = "ws://localhost:8080"
 
 # Path to the extracted model directory
-model_path = "../package/static/model/DistilBERT/BERT_saved"
+model_path = "/Users/gabrielungur/Desktop/McHacks12/McHack12.1/package/static/model/DistilBERT/BERT_saved"
 
 # Load the fine-tuned model
 model = AutoModelForSequenceClassification.from_pretrained(model_path)
