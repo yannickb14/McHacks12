@@ -3,4 +3,5 @@ VanillaTilt.init(document.querySelectorAll(".card"),{
     speed: 700,
     glare: false,
     gyroscope: true,
+    debug: false
 });

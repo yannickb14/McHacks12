@@ -3,7 +3,7 @@
     --githubDark: rgba(13, 17, 23, 255);
     --pastelGreen: rgba(171, 240, 209, 255);
     --pastelRed: rgba(255, 64, 63, 255);
-    --codeJamBlue: #2f2f60;
+    --mcHacksBlue: #2f2f60;
     --white: white;
 
     --fifaRareGold: #f2e48e;
@@ -20,9 +20,10 @@ body {
     font-family: "Manrope", serif;
     font-weight: 500;
     font-style: normal;
-    margin: 0 auto;
     padding: 0;
     overflow: hidden;
+    height: 450px;
+    padding-bottom: 100px;
 }
 
 

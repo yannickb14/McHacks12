@@ -33,6 +33,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     count++;
                 }
             });
+
             averageRating1 = ratings / count;
             percentofFakes1 = Math.round((1 - (fakes / count)) * 100);
             console.log(percentofFakes1);
@@ -42,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function () {
             document.getElementById("percentageGrade1").innerHTML = `${percentofFakes1}%`;
 
             for (let i = 0; i < averageRating1; i++){
-                document.getElementById("starRating").innerHTML += `<div class="star"></div>`;
+                document.getElementById("starRating").innerHTML += `<div id="star" class="star"></div>`;
             }
 
             // All things that change color
@@ -59,6 +60,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
             const threeDText = document.getElementById("letterGrade");
 
+            //star
+            const stars = document.querySelectorAll('#star');
+
             console.log(typeof container);
 
             
@@ -72,6 +76,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
                  // blob
                  blob.style.backgroundColor = "rgba(255, 64, 63, 255)";
+                 
+                // Iterate through each element and set its background color to red
+                stars.forEach(star => {
+                    star.style.backgroundColor = '#9b7662';
+                });
 
                  cardTitle.style.color = '#9b7662';
                  line.style.color = '#9b7662';
@@ -107,6 +116,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
                  // blob
                  blob.style.backgroundColor = "white";
+
+                 // Iterate through each element and set its background color to red
+                stars.forEach(star => {
+                    star.style.backgroundColor = '#cddbdf';
+                });
 
                  cardTitle.style.color = '#cddbdf';
                  line.style.color = '#cddbdf';
@@ -146,6 +160,11 @@ document.addEventListener('DOMContentLoaded', function () {
                   
                   // blob
                   blob.style.backgroundColor = "rgba(171, 240, 209, 255)";
+
+                  // Iterate through each element and set its background color to red
+                stars.forEach(star => {
+                    star.style.backgroundColor = '#caab50';
+                });
  
                   cardTitle.style.color = '#f2e48e';
                   line.style.color = '#f2e48e';
@@ -181,6 +200,12 @@ document.addEventListener('DOMContentLoaded', function () {
                 
                 // blob
                 blob.style.backgroundColor = "rgba(171, 240, 209, 255)";
+
+
+                // Iterate through each element and set its background color to red
+                stars.forEach(star => {
+                    star.style.backgroundColor = '#f2e48e';
+                });
 
                 cardTitle.style.color = '#f2e48e';
                 line.style.color = '#f2e48e';
