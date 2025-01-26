@@ -22,9 +22,25 @@ document.addEventListener('DOMContentLoaded', function () {
             let ratings = 0;
             let count = 0;
             let fakes = 0;
+            let link = "";
         
             responseJson.forEach((review) => {
-                if (review.status == 0) {
+
+                if (review.title == "link"){
+                    link += review.body;
+
+                    // Define the URL you want to set dynamically
+                    const dynamicHref = `${link}`;
+
+                    // Select the anchor element by its ID
+                    const productLink = document.getElementById("productLink");
+
+                    // Set the href attribute to the dynamic URL
+                    productLink.href = dynamicHref;
+
+                }
+
+                else if (review.status == 0) {
                     ratings += parseInt(review.rating, 10); // Convert rating to integer if necessary
                     count++;
                 }
@@ -167,7 +183,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
                   // Select all elements with class "star"
                     stars.forEach(star => {
-                        star.style.backgroundColor = '#2f2f60';
+                        star.style.backgroundColor = '#f2e48e';
                     });
 
 

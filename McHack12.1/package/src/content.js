@@ -13,9 +13,42 @@ class Review{
 var percentofFakes1 = 0;
 var averageRating1 = 0;
 
+
+    (async function scrollAndReturn() {
+        // Calculate 1/5 of the page height
+        const oneFifthHeight = document.body.scrollHeight;
+    
+        // Scroll down by 1/5 of the page height
+        window.scrollTo({
+        top: oneFifthHeight,
+        behavior: "smooth", // Optional: Add smooth scrolling
+        });
+    
+        // Wait for the scrolling to complete (add a delay)
+        await new Promise((resolve) => setTimeout(resolve, 1000)); // Adjust delay as needed
+    
+        // Scroll back to the top
+        window.scrollTo({
+        top: 0,
+        behavior: "smooth", // Optional: Add smooth scrolling
+        });
+    
+        // Wait for the scrolling to complete (add another delay)
+        await new Promise((resolve) => setTimeout(resolve, 1000)); // Adjust delay as needed
+    
+        console.log("Scroll completed, continuing script...");
+        // Rest of your script goes here
+
+
+
 //Try to scrape for different types of review lists
 let reviewsContainer = document.querySelector("#cm-cr-dp-review-list");
-let recommendedProducts = document.querySelector("similarities_features_div");
+
+let recommendedProducts = document.querySelector("#anonCarousel1");
+const firstCard = recommendedProducts.querySelector(".a-carousel-card");
+const link = firstCard.querySelector(".a-link-normal");
+
+
 
 if(!reviewsContainer){
     reviewsContainer = document.querySelector("#cm_cr-review_list");
@@ -51,6 +84,9 @@ if(reviewsContainer){
         });
 
         console.log(parsedReviews);
+        const newlink = link.href;
+        console.log(newlink);
+        parsedReviews.push(new Review("link", newlink, "No rating", "No date"));
         
 
 
@@ -72,7 +108,7 @@ if(reviewsContainer){
                 console.log("This message appears after 10 seconds!");
                 // Add your code here
                 ws.send(JSON.stringify(parsedReviews));
-            }, 1000);
+            }, 1500);
             
             console.log(JSON.stringify(parsedReviews));
         };
@@ -224,10 +260,4 @@ function addGreenCheckmark(avatarContainer) {
     // Add the green checkmark as an overlay inside the avatar container
     avatarContainer.appendChild(greenCheck);
 }
-
-
-
-
-
-export let percentofFakes = percentofFakes1;
-export let averageRating = averageRating1;
+})();
