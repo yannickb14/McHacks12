@@ -56,54 +56,7 @@ if(reviewsContainer){
 
     // Find all genome widgets and remove them
     // Select all elements with the data-hook "genome-widget"
-const genomeWidgets = document.querySelectorAll('[data-hook="genome-widget"]');
-
-genomeWidgets.forEach((widget) => {
-    // Find the profile avatar container
-    const avatarContainer = widget.querySelector('.a-profile-avatar');
-
-    if (avatarContainer) {
-        // Create a red "X" using a div
-        const redX = document.createElement("div");
-        redX.style.position = "absolute";
-        redX.style.width = "100%"; // Full width of the avatar container
-        redX.style.height = "100%"; // Full height of the avatar container
-        redX.style.top = "0";
-        redX.style.left = "0";
-        redX.style.zIndex = "10"; // Ensure it is above the image
-
-        // Set up the parent container for relative positioning
-        avatarContainer.style.position = "relative";
-
-        // Create the two diagonal lines for the "X"
-        const line1 = document.createElement("div");
-        line1.style.position = "absolute";
-        line1.style.width = "100%";
-        line1.style.height = "5px"; // Thickness of the line
-        line1.style.backgroundColor = "red";
-        line1.style.transform = "rotate(45deg)";
-        line1.style.top = "50%";
-        line1.style.left = "0";
-        line1.style.transformOrigin = "center";
-
-        const line2 = document.createElement("div");
-        line2.style.position = "absolute";
-        line2.style.width = "100%";
-        line2.style.height = "5px"; // Thickness of the line
-        line2.style.backgroundColor = "red";
-        line2.style.transform = "rotate(-45deg)";
-        line2.style.top = "50%";
-        line2.style.left = "0";
-        line2.style.transformOrigin = "center";
-
-        // Append the lines to the redX div
-        redX.appendChild(line1);
-        redX.appendChild(line2);
-
-        // Add the red "X" as an overlay inside the avatar container
-        avatarContainer.appendChild(redX);
-    }
-});
+    const genomeWidgets = document.querySelectorAll('[data-hook="genome-widget"]');
 
 
 
@@ -141,10 +94,73 @@ genomeWidgets.forEach((widget) => {
                 if (review.status == 0) {
                     ratings += parseInt(review.rating, 10); // Convert rating to integer if necessary
                     count++;
+                                                // Find the profile avatar container
+                            const avatarContainer = genomeWidgets[count - 1].querySelector('.a-profile-avatar');
+
+                            if (avatarContainer) {
+                                addGreenCheckmark(avatarContainer)
+                            }
                 }
                 else{
                     fakes++;
                     count++;
+                
+
+                            // Find the profile avatar container
+                            const avatarContainer = genomeWidgets[count - 1].querySelector('.a-profile-avatar');
+
+                            if (avatarContainer) {
+                                // Create a red "X" using a div
+                                const redX = document.createElement("div");
+                                redX.style.position = "absolute";
+                                redX.style.width = "100%"; // Full width of the avatar container
+                                redX.style.height = "100%"; // Full height of the avatar container
+                                redX.style.top = "0";
+                                redX.style.left = "0";
+                                redX.style.zIndex = "10"; // Ensure it is above the image
+
+                                // Set up the parent container for relative positioning
+                                avatarContainer.style.position = "relative";
+
+                                // Create the two diagonal lines for the "X"
+                                const line1 = document.createElement("div");
+                                line1.style.position = "absolute";
+                                line1.style.width = "100%";
+                                line1.style.height = "5px"; // Thickness of the line
+                                line1.style.backgroundColor = "red";
+                                line1.style.transform = "rotate(45deg)";
+                                line1.style.top = "50%";
+                                line1.style.left = "0";
+                                line1.style.transformOrigin = "center";
+
+                                const line2 = document.createElement("div");
+                                line2.style.position = "absolute";
+                                line2.style.width = "100%";
+                                line2.style.height = "5px"; // Thickness of the line
+                                line2.style.backgroundColor = "red";
+                                line2.style.transform = "rotate(-45deg)";
+                                line2.style.top = "50%";
+                                line2.style.left = "0";
+                                line2.style.transformOrigin = "center";
+
+                                // Append the lines to the redX div
+                                redX.appendChild(line1);
+                                redX.appendChild(line2);
+
+                                // Add the red "X" as an overlay inside the avatar container
+                                avatarContainer.appendChild(redX);
+                            }
+                        
+
+
+
+
+
+
+
+
+
+
                 }
             });
             averageRating1 = ratings / count;
@@ -160,6 +176,58 @@ genomeWidgets.forEach((widget) => {
 else{
     console.log("failed to find reviews");
 }
+
+
+
+function addGreenCheckmark(avatarContainer) {
+    // Ensure the avatar container exists
+    if (!avatarContainer) return;
+
+    // Create a green checkmark using a div
+    const greenCheck = document.createElement("div");
+    greenCheck.style.position = "absolute";
+    greenCheck.style.width = "100%"; // Full width of the avatar container
+    greenCheck.style.height = "100%"; // Full height of the avatar container
+    greenCheck.style.top = "0";
+    greenCheck.style.left = "0";
+    greenCheck.style.zIndex = "10"; // Ensure it is above the image
+
+    // Set up the parent container for relative positioning
+    avatarContainer.style.position = "relative";
+
+    // Create the first diagonal line of the checkmark
+    const line1 = document.createElement("div");
+    line1.style.position = "absolute";
+    line1.style.width = "40%"; // Adjusted for proper proportions
+    line1.style.height = "5px"; // Thickness of the line
+    line1.style.backgroundColor = "green";
+    line1.style.transform = "rotate(-110deg)"; // Rotation for the checkmark
+    line1.style.top = "61.2%"; // Position the line appropriately
+    line1.style.left = "45%"; // Offset to center the checkmark
+    line1.style.transformOrigin = "left";
+
+    // Create the second diagonal line of the checkmark
+    const line2 = document.createElement("div");
+    line2.style.position = "absolute";
+    line2.style.width = "80%"; // Adjusted for proper proportions
+    line2.style.height = "5px"; // Thickness of the line
+    line2.style.backgroundColor = "green";
+    line2.style.transform = "rotate(-45deg)"; // Rotation for the checkmark
+    line2.style.top = "55%"; // Position the line appropriately
+    line2.style.left = "45%"; // Offset to align with the other line
+    line2.style.transformOrigin = "left";
+
+    // Append the lines to the greenCheck div
+    greenCheck.appendChild(line1);
+    greenCheck.appendChild(line2);
+
+    // Add the green checkmark as an overlay inside the avatar container
+    avatarContainer.appendChild(greenCheck);
+}
+
+
+
+
 
 export let percentofFakes = percentofFakes1;
 export let averageRating = averageRating1;
