@@ -73,14 +73,7 @@ document.addEventListener('DOMContentLoaded', function () {
                  // Color Bronze + Red + black background
                  container.style.backgroundColor = "black";
                  container.style.borderColor = "#9b7662";
-
-                 // blob
-                 blob.style.backgroundColor = "rgba(255, 64, 63, 255)";
                  
-                // Iterate through each element and set its background color to red
-                stars.forEach(star => {
-                    star.style.backgroundColor = '#9b7662';
-                });
 
                  cardTitle.style.color = '#9b7662';
                  line.style.color = '#9b7662';
@@ -113,14 +106,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
                  container.style.backgroundColor = "#2f2f60";
                  container.style.borderColor = "#cddbdf";
-
-                 // blob
-                 blob.style.backgroundColor = "white";
-
-                 // Iterate through each element and set its background color to red
-                stars.forEach(star => {
-                    star.style.backgroundColor = '#cddbdf';
-                });
 
                  cardTitle.style.color = '#cddbdf';
                  line.style.color = '#cddbdf';
@@ -158,13 +143,6 @@ document.addEventListener('DOMContentLoaded', function () {
                   container.style.backgroundColor = "#2f2f60";
                   container.style.borderColor = "#f2e48e";
                   
-                  // blob
-                  blob.style.backgroundColor = "rgba(171, 240, 209, 255)";
-
-                  // Iterate through each element and set its background color to red
-                stars.forEach(star => {
-                    star.style.backgroundColor = '#caab50';
-                });
  
                   cardTitle.style.color = '#f2e48e';
                   line.style.color = '#f2e48e';
@@ -198,14 +176,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 container.style.backgroundColor = "#2f2f60";
                 container.style.borderColor = "#f2e48e";
                 
-                // blob
-                blob.style.backgroundColor = "rgba(171, 240, 209, 255)";
-
-
-                // Iterate through each element and set its background color to red
-                stars.forEach(star => {
-                    star.style.backgroundColor = '#f2e48e';
-                });
 
                 cardTitle.style.color = '#f2e48e';
                 line.style.color = '#f2e48e';

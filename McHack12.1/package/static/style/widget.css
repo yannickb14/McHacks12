@@ -1,20 +1,25 @@
 /* Background */
-.container {
-  position: relative;
-  justify-content: center;
-  margin: 0 auto;
-  border-radius: 15px;
-  box-shadow: 2px 2px 30px rgba(255, 255, 255, 0.2); 
+    .container {
+        position: relative;
+        justify-content: center;
+        margin: 0 auto;
+        
+        width: 30vw; /* 95% for extension */
+        height: 40vw;
+        margin-top: 5rem; /* REMOVE */
 
-  height: 450px;
-  width: 95vw;
-  border: 2.5px solid var(--fifaRareGold);
-}
+        border-radius: 15px;
+        box-shadow: 2px 2px 30px rgba(255, 255, 255, 0.2); 
+        
+
+        border: 2.5px solid var(--fifaRareGold);
+    }
 
 
-.flip-card-3D-wrapper{
-  width: 340px !important; 
-}
+    .flip-card-3D-wrapper{
+      height: 400px !important; 
+      width: 350px !important; 
+    }
 
 .topRow{
   margin: 10px auto;
@@ -87,24 +92,24 @@
   
 
 
-  /* Percentage Grade */
-    /* Top Grade */
-      #percentageGrade,
-      #percentageGrade1{
-          position: absolute;
-          margin: -5px 0 0 15px;
-          font-size: 30px;
-          text-align: center;
-          font-family: "Manrope", cursive;
-          -webkit-text-stroke: 0.5px black; /* Black outline */
-          text-stroke: 0.2px black;
-      }
-    /* Bottom Grade */
-      .bottomRow #percentageGrade1{
-          bottom: 3px;
-          right: 15px;
-          transform: rotate(180deg);
-      }
+        /* Percentage Grade */
+          /* Top Grade */
+            #percentageGrade,
+            #percentageGrade1{
+                position: absolute;
+                margin: -5px 0 0 15px;
+                font-size: 30px;
+                text-align: center;
+                font-family: "Manrope", cursive;
+                -webkit-text-stroke: 0.5px black; /* Black outline */
+                text-stroke: 0.2px black;
+            }
+          /* Bottom Grade */
+            .bottomRow #percentageGrade1{
+                bottom: 15px;
+                right: 15px;
+                transform: rotate(180deg);
+            }
 
    /* Star Rating */ 
   
@@ -112,31 +117,32 @@
 
 
 
-  .star-container {
-      display: flex;
-      gap: 5px; /* Space between stars */
-      margin-left: 20px;
-      margin-top: 15px;
-    }
-    .star {
-      width: 30px;
-      height: 30px;
-      clip-path: polygon(
-        50% 0%,
-        61% 35%,
-        98% 35%,
-        68% 57%,
-        79% 91%,
-        50% 70%,
-        21% 91%,
-        32% 57%,
-        2% 35%,
-        39% 35%
-      );
-    }
-    .star.filled {
-      background-color: var(--fifaRareGold);
-    }
+        .star-container {
+            display: flex;
+            gap: 5px; /* Space between stars */
+            margin-left: 20px;
+            margin-top: 15px;
+          }
+          .star {
+            width: 30px;
+            height: 30px;
+            background-color: var(--fifaRareGold);
+            clip-path: polygon(
+              50% 0%,
+              61% 35%,
+              98% 35%,
+              68% 57%,
+              79% 91%,
+              50% 70%,
+              21% 91%,
+              32% 57%,
+              2% 35%,
+              39% 35%
+            );
+          }
+          .star.filled {
+            background-color: var(--fifaRareGold);
+          }
 
 
 

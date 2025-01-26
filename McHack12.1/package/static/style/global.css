@@ -16,7 +16,7 @@
 }
 
 body {
-    background-color: var(--githubDark);
+    background-color: var(--codeJamBlue);
     font-family: "Manrope", serif;
     font-weight: 500;
     font-style: normal;
@@ -25,6 +25,7 @@ body {
     height: 450px;
     padding-bottom: 100px;
 }
+
 
 
 /* Blob Animation */
